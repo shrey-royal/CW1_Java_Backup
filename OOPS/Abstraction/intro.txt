@@ -1,0 +1,24 @@
+Abstraction in Java: Abstract Class and Abstract Method
+
+> Abstraction is a process of hiding the implementation details and showing only functionality to the user. Abstraction lets you focus on what the object does instead of how it does it.
+
+> Abstract class in Java is a special type of class that contains abstract methods. An abstract method is a method that is declared, but contains no implementation. Abstract classes may not be instantiated, and require subclasses to provide implementations for the abstract methods.
+
+> Example: Suppose we have a class that contains a method to draw different shapes, such as circle, rectangle, etc. We can create an abstract class Shape that contains an abstract method draw() and subclasses of Shape, such as Circle, Rectangle, etc. that implement the draw() method for different shapes. The draw() method of Circle will be different from the draw() method of Rectangle. Thus, we can achieve abstraction using abstract classes.
+
+Interface in Java:
+
+> An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface.
+
+> Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types. Method bodies exist only for default methods and static methods.
+
+> Writing an interface is similar to writing a class. But a class describes the attributes and behaviors of an object. And an interface contains behaviors that a class implements.
+
+> Unless the class that implements the interface is abstract, all the methods of the interface need to be defined in the class.
+
+> An interface is similar to a class in the following ways:
+
+* An interface can contain any number of methods.
+* An interface is written in a file with a .java extension, with the name of the interface matching the name of the file.
+* The byte code of an interface appears in a .class file.
+* Interfaces appear in packages, and their corresponding bytecode file must be in a directory structure that matches the package name.
