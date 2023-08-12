@@ -1,0 +1,40 @@
+Encapsulation in java:
+
+Encapsulation is a process of wrapping code and data together into a single unit. It is a way to achieve data hiding in Java because other class will not be able to access the data through the private data members.
+
+Topics under Encapsulation:
+1. Access Modifiers (public (accessible everywhere), private (class-level access), protected (class-level as well as inherited classes), default (package level))
+2. Getters and Setters
+3. Packages
+
+
+Package: A package is a collection of related classes and interfaces. Package in java can be categorized in two form, built-in package and user-defined package.
+
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+
+Advantage of Java Package:
+
+> Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+
+> It provides access protection.
+> package removes naming collision.
+
+> What is Naming Collision:
+> we have 4 girls with same name called Aisha. How we will call them? We will call them with their family name. Same thing happens in java. If we have two classes with same name, we can differentiate them with their package name.
+
+> For example, if we write following code, it will show an error message.
+
+> class Aisha{
+>   //code
+> }
+> class Aisha{
+>   //code
+> }
+
+> But if we put Aisha class in a package e.g. package mypack; then compiler will not complain because both Aisha classes are in different packages namely mypack and yourpack.
+
+> There are three ways to access the package from outside the package.
+
+> import package.*;
+> import package.classname;
+> fully qualified name. (e.g. if we want to use Math class of mypack package, we need to import the class as follows - import mypack.Math;)
