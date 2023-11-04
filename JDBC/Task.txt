@@ -1,0 +1,75 @@
+mysql> desc city;
++-------------+----------+------+-----+---------+----------------+
+| Field       | Type     | Null | Key | Default | Extra          |
++-------------+----------+------+-----+---------+----------------+
+| ID          | int      | NO   | PRI | NULL    | auto_increment |
+| Name        | char(35) | NO   |     |         |                |
+| CountryCode | char(3)  | NO   | MUL |         |                |
+| District    | char(20) | NO   |     |         |                |
+| Population  | int      | NO   |     | 0       |                |
++-------------+----------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+--------------------------------------------------------------------------------
+sample CRUD (Create, Read, Update, Delete) queries for the "city" table in MySQL. 
+
+1. **Create (INSERT) a new city record**:
+
+   To insert a new city record, you can use the `INSERT INTO` statement. Here's an example:
+
+   ```sql
+   INSERT INTO city (Name, CountryCode, District, Population) 
+   VALUES ('NewCity', 'XYZ', 'NewDistrict', 10000);
+   ```
+
+2. **Read (SELECT) city records**:
+
+   To retrieve city records, you can use the `SELECT` statement. Here are some examples:
+
+   - **Retrieve all cities**:
+
+     ```sql
+     SELECT * FROM city;
+     ```
+
+   - **Retrieve cities in a specific country**:
+
+     ```sql
+     SELECT * FROM city WHERE CountryCode = 'CountryCodeValue';
+     ```
+
+   - **Retrieve cities with a specific name**:
+
+     ```sql
+     SELECT * FROM city WHERE Name = 'CityName';
+     ```
+
+   - **Retrieve cities with a population greater than a certain value**:
+
+     ```sql
+     SELECT * FROM city WHERE Population > 10000;
+     ```
+
+3. **Update a city record**:
+
+   To update an existing city record, you can use the `UPDATE` statement. Here's an example:
+
+   ```sql
+   UPDATE city
+   SET Name = 'UpdatedCityName', District = 'UpdatedDistrict'
+   WHERE ID = 1;
+   ```
+
+   This query updates the "Name" and "District" fields for the city with ID 1.
+
+4. **Delete a city record**:
+
+   To delete a city record, you can use the `DELETE` statement. Here's an example:
+
+   ```sql
+   DELETE FROM city
+   WHERE ID = 2;
+   ```
+
+   This query deletes the city record with ID 2.
+
+Remember to replace the placeholder values ('NewCity', 'XYZ', 'NewDistrict', 10000, 'CountryCodeValue', 'CityName', 1, 2) with the actual data you want to insert, search for, update, or delete. Also, be cautious when using `DELETE` statements, as they permanently remove data from the table. Always double-check the conditions to avoid accidental data loss.
